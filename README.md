@@ -1,7 +1,7 @@
 # Judobase API Wrapper
 
 [![PyPI](https://img.shields.io/pypi/v/judobase)](https://pypi.org/project/judobase/)
-[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Downloads](https://img.shields.io/pypi/dm/judobase)](https://pypistats.org/packages/judobase)
 [![License](https://img.shields.io/pypi/l/judobase)](https://opensource.org/licenses/MIT)
 [![Docs](https://img.shields.io/badge/docs-stable-brightgreen)](https://daviddzgoev.github.io/judobase/)
@@ -29,7 +29,7 @@ Judobase API Wrapper is a Python library that provides a async interface to inte
 ## Features
 
 - **Reverse Engineered:** Reverse engineered base Judobase API methods. Access to data 
-on tournaments, athletes, results is available by python classes `JudokaAPI`, `CompetitionAPI`, `ContestAPI`, `CountryAPI`. 
+on tournaments, athletes, results is available by python classes `JudokaAPI`, `CompetitionAPI`, `ContestAPI`, `CountryAPI`, `RatingAPI`. 
 - **Extension:** Implemented additional methods to the API to make it more user-friendly. 
 Look at `JudoBase` class.
 - **Pydantic Schemas:** All data is returned as Pydantic models, making it easy to work with.
@@ -82,6 +82,7 @@ asyncio.run(main())
 - `CompetitionAPI`: Base methods for fetching data about competitions.
 - `ContestAPI`: Base methods for fetching data about contests.
 - `CountryAPI`: Base methods for fetching data about countries.
+- `RatingAPI`: Base methods for fetching World Ranking List data about athletes.
 
 ---
 

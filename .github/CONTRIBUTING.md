@@ -9,11 +9,11 @@ Thank you for considering contributing to **Judobase**! We appreciate your time 
 1. **Fork** the repository.
 2. **Clone** your fork locally:
    ```sh
-   git clone https://github.com/DavidDzgoev/judobase.git
+   git clone https://github.com/<your-username>/judobase.git
    ```
 3. **Add the upstream repository**:
    ```sh
-   git remote add upstream https://github.com/original-owner/original-repo.git
+   git remote add upstream https://github.com/DavidDzgoev/judobase.git
    ```
 4. **Create a new branch** for your changes:
    ```sh
@@ -37,7 +37,8 @@ Thank you for considering contributing to **Judobase**! We appreciate your time 
 - Follow **PEP 8** (for Python) or the appropriate coding style for the project.
 - Use `ruff` and `wemake-python-styleguide` for Python formatting and linting:
   ```sh
-  make lint
+  uv sync --extra tests
+  uv run make lint
   ```
 - Keep code **clean, readable, and well-commented**.
 
@@ -46,7 +47,7 @@ Thank you for considering contributing to **Judobase**! We appreciate your time 
 - Ensure all new features or fixes include tests.
 - Run tests before submitting a PR:
   ```sh
-  pytest tests/
+  uv run make test
   ```
 - If possible, write **unit tests** and **integration tests**.
 
@@ -66,7 +67,7 @@ Thank you for considering contributing to **Judobase**! We appreciate your time 
 1. Make sure your branch is **up to date** with the latest changes:
    ```sh
    git fetch upstream
-   git merge upstream/main
+   git merge upstream/master
    ```
 2. Ensure **all tests pass** before submitting.
 3. Follow the PR template (if available) and provide a **clear description**.

@@ -15,7 +15,7 @@ Instead, it focuses only on modules that are relevant for documentation purposes
    |
    \|- __init__.py
    \|- :ref:`base.py <base>`
-   \|- :ref:`judobase.py <judobase_api>`
+   \|- :ref:`judobase_api.py <judobase_api>`
    \|- schemas.py
 
 For everything else, please refer to the `source code <https://github.com/DavidDzgoev/judobase>`_
@@ -40,7 +40,7 @@ This module is located at ``judobase/base.py``.
 .. _judobase_api:
 
 judobase_api.py
-=============
+===============
 
 This module is located at ``judobase/judobase_api.py``.
 
