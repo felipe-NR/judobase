@@ -22,6 +22,8 @@ uv build                       # build sdist/wheel
 
 Lint and mypy only cover `judobase/`, not `tests/` or `examples/`. The 99% coverage gate means new code in `judobase/` needs tests; `[tool.coverage.run] source = ["judobase"]` keeps `tests/` out of the measurement.
 
+The fork (`felipe-NR/judobase`) has GitHub Actions disabled; run `uv run make lint` and `uv run make test` locally before every push.
+
 ## Architecture
 
 Three layers, each in its own module:
