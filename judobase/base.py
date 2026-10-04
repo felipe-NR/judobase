@@ -122,6 +122,8 @@ class ContestAPI(_Base):
                 "params[limit]": 5000,
             }
         )
+        if "contests" not in request_result:
+            raise TypeError("Expected 'contests' key in JSON response.")
         return [Contest(**contest) for contest in request_result["contests"]]
 
 

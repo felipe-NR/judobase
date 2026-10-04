@@ -131,6 +131,16 @@ class TestContestAPI:
                 result = await client.find_contests()
                 assert result == [Contest(**comp) for comp in test_data["expected"]]
 
+    @pytest.mark.asyncio
+    async def test_find_contests_missing_contests_key(self, mock_session, mock_api_response):
+        """Test find_contests raises TypeError when the response lacks 'contests'."""
+        mock_api_response(mock_response={"data": "test_response"}, mock_session=mock_session)
+
+        with patch("judobase.base.ClientSession", return_value=mock_session):
+            async with ContestAPI() as client:
+                with pytest.raises(TypeError, match="Expected 'contests' key in JSON response."):
+                    await client.find_contests()
+
 
 class TestJudokaAPI:
     """Test cases for the Judoka API class."""
