@@ -130,8 +130,10 @@ class Competition(BaseModel):
 
     @field_validator("updated_at", mode="after")
     @classmethod
-    def parse_updated_at(cls, value):
+    def parse_updated_at(cls, value: datetime | None) -> datetime | None:
         """Converts the `updated_at` field to a datetime object with UTC timezone."""
+        if value is None:
+            return None
         return value.replace(tzinfo=timezone.utc)
 
     @staticmethod
