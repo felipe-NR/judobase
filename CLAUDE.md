@@ -20,7 +20,7 @@ uv run sphinx-build -b html docs/source docs/build/html              # build doc
 uv build                       # build sdist/wheel
 ```
 
-Lint and mypy only cover `judobase/`, not `tests/` or `examples/`. The 99% coverage gate means new code in `judobase/` needs tests. There is no `[tool.coverage]` config, so `--cov` also measures `tests/`, which sit at 100% and lift the total.
+Lint and mypy only cover `judobase/`, not `tests/` or `examples/`. The 99% coverage gate means new code in `judobase/` needs tests; `[tool.coverage.run] source = ["judobase"]` keeps `tests/` out of the measurement.
 
 ## Architecture
 
